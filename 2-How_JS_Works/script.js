@@ -18,7 +18,6 @@ var retirement = function(year) {
 retirement(1990);
 
 // variables
-
 console.log(age);
 var age = 23;
 console.log(age);
@@ -37,7 +36,7 @@ console.log(age);
 // Lecture: Scoping
 
 // First Scoping example
-
+/*
 var a = 'Hello!';
 first();
 
@@ -56,3 +55,40 @@ function third() {
   //console.log(c);
   console.log(a+d);
 }
+*/
+
+////////////////////////////
+// Lecture: The this keyword
+
+// console.log(this);
+
+// calculateAge(1985);
+//
+// function calculateAge(year) {
+//   console.log(2016 - year);
+//   console.log(this);
+// }
+
+var john = {
+  name: 'John',
+  yearOfBirth: 1990,
+  calculateAge: function() {
+      console.log(this);
+      console.log(2016 - this.yearOfBirth);
+      /*
+      function innerfunction() {
+        console.log(this);
+      }
+      innerfunction(); */
+  }
+}
+
+john.calculateAge();
+
+var mike = {
+  name: 'Mike',
+  yearOfBirth: 1984
+};
+
+mike.calculateAge = john.calculateAge;
+mike.calculateAge();
