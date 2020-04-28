@@ -1,7 +1,7 @@
 /*************************
 * Lecture: Hoisting
 */
-
+/*
 // functions
 calculateAge(1968);
 
@@ -31,3 +31,28 @@ function foo() {
 
 foo();
 console.log(age);
+*/
+
+/////////////////////////////
+// Lecture: Scoping
+
+// First Scoping example
+
+var a = 'Hello!';
+first();
+
+function first() {
+  var b = 'Hi!';
+  second();
+
+  function second() {
+    var c = 'Hey!';
+    third();
+  }
+}
+
+function third() {
+  var d = 'John';
+  //console.log(c);
+  console.log(a+d);
+}
