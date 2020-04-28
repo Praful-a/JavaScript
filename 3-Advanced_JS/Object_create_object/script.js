@@ -1,6 +1,6 @@
 // Funciton constructor
 
-/*
+
 var john = {
   name: 'John',
   yearOfBirth: 1990,
@@ -30,7 +30,7 @@ mark.calculateAge();
 console.log(john.lastName);
 console.log(jane.lastName);
 console.log(mark.lastName);
-*/
+
 
 // Object.create
 var personProto = {
