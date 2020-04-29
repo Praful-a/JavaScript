@@ -1,7 +1,7 @@
 // Primitives vs objects
 
 // Primitives
-/*
+
 var a = 23;
 var b = a;
 a = 46;
@@ -35,11 +35,11 @@ change(age, obj)
 
 console.log(age);
 console.log(obj.city);
-*/
+
 
 ///////////////////////////////////
 // Lecture: Passing functions as arguments
-/*
+
 var years = [1990, 1965, 1937, 2005, 1998];
 function arrayCalc(arr, fn) {
   var arrRes = [];
@@ -72,7 +72,7 @@ var rates = arrayCalc(ages, maxHeartRate);
 console.log(ages);
 console.log(fullAges);
 console.log(rates);
-*/
+
 
 ///////////////////////////////
 // Lecture: Functions returning Functions
