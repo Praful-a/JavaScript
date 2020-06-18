@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+
+    <meta http-equiv="X-UA-Compatible" content="ie-edge">
+    <title>Ajax 1 - Text File</title>
+  </head>
+  <body>
+    <button id="button" type="button" name="button">Get Text File</button>
+    <script type="text/javascript">
+      //create the listener
+      document.getElementById('button').addEventListener('click', loadText);
+
+      function loadText() {
+        //Create XHR object
+        var xhr = new XMLHttpRequest();
+        //Open - type, url/file, async
+        xhr.open('GET', 'sample.txt', true);
+
+        xhr.onreadystatechange = function() {
+          if(this.readyState == 4 && this.status == 200) {
+            console.log(this.responseText);
+          }
+        }
+
+
+        xhr.send();
+      }
+    </script>
+  </body>
+</html>
